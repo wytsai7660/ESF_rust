@@ -1,40 +1,32 @@
 fn add(a: i32, b: i32) -> i32 {
     return a + b;
+    // a + b
 }
 
 fn main() {
-    let n: i32 = 9;
-    // let n = 10;
-    let mut m = add(n, -5);
+    let n = 10;
 
-    println!("immutable variable n = {}", n);
-    println!("mutable variable m = {m}");
+    let m = n > 5 ? 999 : 111;
 
-    for i in 0..n {
-        print!("{i} ");
-        // println!("Hi");
-    }
-    println!();
+    // let m;
+    // if n > 5 {
+    //     m = 999;
+    // } else {
+    //     m = 111;
+    // }
 
-    if n > m {
-        println!("n is greater than m");
-    } else if n == m {
-        println!("n is equal to m")
-    } else {
-        println!("n is less than m");
-    }
+    // let m = if n > 5 { 999 } else { 111 };
 
-    while m > 0 {
-        println!("m = {}", m);
-        m -= 1;
-    }
+    // let m = match n {
+    //     0 => 1,
+    //     1 => 2,
+    //     2 => 3,
+    //     3 => 4,
+    //     _ => -1,
+    // };
 
-    match n % 5 {
-        0 => println!("n is multiple of 5"),
-        remainder => println!("n is not multiple of 5, remainder is {remainder}"),
-    }
+    println!("n = {}", n);
+    println!("m = {}", m);
 
-    if let 10 = n {
-        println!("n is 10");
-    }
+    add(n, m);
 }
