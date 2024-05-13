@@ -1,32 +1,46 @@
+// use std::io;
+
 fn add(a: i32, b: i32) -> i32 {
-    return a + b;
-    // a + b
+    a + b
 }
 
+// fn readInt<T: std::str::FromStr>() -> T
+// where
+//     T::Err: std::fmt::Debug,
+// {
+//     let mut guess = String::new();
+//     io::stdin()
+//         .read_line(&mut guess)
+//         .expect("Failed to read line");
+
+//     guess.trim().parse().expect("Please type a number!")
+// }
+
 fn main() {
-    let n = 10;
+    // Let's do some stupid things
 
-    let m = n > 5 ? 999 : 111;
+    let m = (let n = 10);
+    // let n = 10;
 
-    // let m;
-    // if n > 5 {
-    //     m = 999;
-    // } else {
-    //     m = 111;
+    // n = 20;
+
+    // println!("{} {}", n);
+
+    // if (n < 0) {
+    //     println!("n is negative");
     // }
 
-    // let m = if n > 5 { 999 } else { 111 };
+    // match n {
+    //     0 => println!("zero"),
+    //     1 => println!("one"),
+    //     other => println!("{}", other),
+    //     _ => println!("other"),
+    // }
 
-    // let m = match n {
-    //     0 => 1,
-    //     1 => 2,
-    //     2 => 3,
-    //     3 => 4,
-    //     _ => -1,
-    // };
+    // let input = readInt::<i32>();
+    // println!("{}", i32::MAX + input);
 
-    println!("n = {}", n);
-    println!("m = {}", m);
-
-    add(n, m);
+    // let input = readInt::<usize>();
+    // let arr: [i32; 5] = [1, 2, 3, 4, 5];
+    // println!("{}", arr[input]);
 }
