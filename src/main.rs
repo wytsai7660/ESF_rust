@@ -1,24 +1,11 @@
 fn main() {
-    let str = String::from("Hello, World!");
+    let mut str = String::from("Hello, World!");
 
-    let str2 = take_and_return(str);
-    // println!("{}", str); // not owner anymore
-    println!("{}", str2);
+    let mut ref1 = &mut str;
+    let mut ref2 = &mut str;
 
-    // print_but_dont_take(&str);
-    // println!("{}", str);
-
-    // modify_but_dont_take(&mut str);
-    // println!("{}", str);
-}
-
-#[allow(dead_code)]
-fn take_and_return(str: String) -> String {
-    str
-}
-
-#[allow(dead_code)]
-fn print_but_dont_take(str: &String) {
+    modify_but_dont_take(ref1);
+    modify_but_dont_take(ref2);
     println!("{}", str);
 }
 
