@@ -1,11 +1,20 @@
 fn main() {
     let mut str = String::from("Hello, World!");
 
-    let mut ref1 = &mut str;
-    let mut ref2 = &mut str;
+    let ref1 = &mut str;
+    let ref2 = &mut str;
 
     modify_but_dont_take(ref1);
     modify_but_dont_take(ref2);
+
+    // println!("{}", str);
+
+    // print_but_dont_take(ref1);
+    // print_but_dont_take(ref2);
+}
+
+#[allow(dead_code)]
+fn print_but_dont_take(str: &String) {
     println!("{}", str);
 }
 
