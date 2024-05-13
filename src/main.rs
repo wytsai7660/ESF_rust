@@ -1,16 +1,13 @@
 fn main() {
-    let str = String::from("Hello, World!");
+    let reference;
+    {
+        let str = String::from("Hello, World!");
+        reference = &str;
+    }
+    print_but_dont_take(reference);
 
-    let ref1 = &mut str;
-    let ref2 = &mut str;
-
-    modify_but_dont_take(ref1);
-    modify_but_dont_take(ref2);
-
-    // println!("{}", str);
-
-    // print_but_dont_take(ref1);
-    // print_but_dont_take(ref2);
+    // let str = String::from("Hello, World!");
+    // take_and_return_ref(str);
 }
 
 #[allow(dead_code)]
@@ -18,7 +15,6 @@ fn print_but_dont_take(str: &String) {
     println!("{}", str);
 }
 
-#[allow(dead_code)]
-fn modify_but_dont_take(str: &mut String) {
-    str.push_str("!");
-}
+// fn take_and_return_ref(str: String) -> &String {
+//     &str
+// }
